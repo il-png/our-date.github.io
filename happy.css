@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(255, 207, 215);
+  position: relative;
+}
+.body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Чтобы конфетти не мешали взаимодействию с другими элементами */
+}
+
+.confetti {
+  position: absolute; /* Чтобы конфетти падали поверх других элементов */
+  animation: fall linear forwards; /* Добавляем анимацию */
+  z-index: 9999;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0); /* Полная видимость в начале */
+  }
+  to {
+    transform: translateY(
+      1000vh
+    ); /* Падает до нижней границы экрана */ /* Оставляем видимость до конца анимации */
+  }
+}
+
+.text {
+  color: rgb(117, 169, 186);
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 60px;
+  font-family: "Times New Roman", Times, serif;
+}
+.congr {
+  color: rgb(117, 169, 186);
+  position: relative;
+  margin-top: 2 0px;
+  text-align: center;
+  font-size: 100px;
+  font-family: "Times New Roman", Times, serif;
+}
+.defolt {
+  position: relative;
+  top: 50px;
+}
+.defolt .contain-heart {
+  display: flex;
+  justify-content: center; /* Выравнивание по горизонтали */
+  align-items: center; /* Выравнивание по вертикали */
+  position: absolute; /* Позволяет наложить его на другие элементы */
+  top: 25%; /* Позиция по вертикали */
+  left: 50%; /* Позиция по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование */
+  z-index: 1000; /* Чтобы сердце находилось над другими элементами */
+}
+
+.heart {
+  position: relative; /* Для правильного позиционирования наложения */
+}
+
+.heart img {
+  width: 1000px; /* Задайте желаемую ширину для изображения сердца */
+  height: 1000px; /* Задайте желаемую высоту для изображения сердца */
+}
+
+.heart-overlay {
+  position: absolute;
+  top: 330px; /* Наложение на верх */
+  left: 350px; /* Наложение на левую сторону */
+  width: 30%; /* Ширина наложения (так же как у сердца) */
+  height: 30%; /* Высота наложения (так же как у сердца) */
+  display: flex;
+  justify-content: center; /* Центрирование наложения */
+  align-items: center; /* Центрирование наложения */
+  overflow: hidden; /* Обеспечивает обрезку наложенного изображения, если оно выходит за границы */
+}
+
+.heart-overlay img {
+  position: absolute;
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translate(-50%, -50%); /* Центрирование */
+  width: auto; /* Автоматическая ширина */
+  height: auto; /* Автоматическая высота */
+  max-width: 100%; /* Ограничение по ширине */
+  max-height: 100%; /* Ограничение по высоте */
+  object-fit: cover; /* Сохранение пропорций изображения */
+}
+.defolt .defolt-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#defolt #defolt-contain1 {
+  display: flex;
+  font-display: row;
+  justify-content: flex-start;
+}
+.defolt .defolt-contain2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#defolt #defolt-contain3 {
+  display: flex;
+  font-display: row;
+  justify-content: flex-start;
+}
+
+.defolt .defolt-contain .img {
+  width: 100px;
+  height: 100px;
+  border: 5px solid;
+  overflow: hidden;
+}
+.defolt .defolt-contain1 .img {
+  position: relative;
+  left: 95px;
+  width: 100px;
+  height: 100px;
+  border: 5px solid;
+  overflow: hidden;
+  margin: 10px;
+}
+.defolt .defolt-contain3 .img {
+  position: relative;
+  left: 1304px;
+  bottom: 1320px;
+  width: 100px;
+  height: 100px;
+  border: 5px solid;
+  overflow: hidden;
+  margin: 10px;
+}
+.defolt .defolt-contain2 .img {
+  position: relative;
+  left: 55px;
+  bottom: 110px;
+  width: 100px;
+  height: 100px;
+  border: 5px solid;
+  overflow: hidden;
+}
+.defolt .defolt-contain .img img {
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.defolt .defolt-contain1 .img img {
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.defolt .defolt-contain2 .img img {
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.defolt .defolt-contain3 .img img {
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.defolt .defolt-contain .img:hover img {
+  transform: scale(1.1);
+}
+.defolt .defolt-contain1 .img:hover img {
+  transform: scale(1.1);
+}
+.defolt .defolt-contain2 .img:hover img {
+  transform: scale(1.1);
+}
+.defolt .defolt-contain3 .img:hover img {
+  transform: scale(1.1);
+}
+#play-music {
+  position: fixed; /* Фиксированное положение */
+  top: 10px; /* Отступ сверху */
+  left: 4%; /* Центрирование по горизонтали */
+  transform: translateX(-50%); /* Центрирование по горизонтали */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  background-color: #ff4081; /* Цвет фона */
+  color: white; /* Цвет текста */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Закругление углов */
+  font-size: 16px; /* Размер шрифта */
+  cursor: pointer; /* Указатель при наведении */
+  z-index: 1000; /* Чтобы кнопка была над другими элементами */
+}
+
+#play-music:hover {
+  background-color: #e91e63; /* Цвет фона при наведении */
+}
